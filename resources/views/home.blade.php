@@ -36,7 +36,7 @@
 <div class="row m-0 p-0" >
     @foreach($banners as $banner)
     <div class="col-md-2 bg-light m-3 border rounded" >
-        <img src="https://kitcell-bucket.s3-sa-east-1.amazonaws.com{{$banner->url}}" alt="" class="mt-1 img-fluid" height="152px" >
+        <img src="{{$banner->url}}" alt="" class="mt-1 img-fluid" height="152px" >
         <hr>
         <div class="row justify-content-center py-3">
             <form action="{{route('delete', ['banner'=> $banner->id])}}" method="post">

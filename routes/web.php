@@ -18,7 +18,7 @@ Route::get('/', 'BannerController@index')->name('welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/home', 'BannerController@store')->name('banner');
+Route::put('/home', 'BannerController@store')->name('banner');
 Route::delete('/home/{banner}', 'BannerController@destroy')->name('delete');
 
 Route::get('/artisan/storage', function() {

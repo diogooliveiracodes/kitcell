@@ -13,6 +13,7 @@
         <div class="card-body">            
             <form method="POST" action="{{route('banner')}}" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="form-group">
                 <label for="arquivo">Selecione a imagem:</label>
                 <input type="file" class="form-control-file" id="arquivo" name="arquivo">
@@ -35,7 +36,7 @@
 <div class="row m-0 p-0" >
     @foreach($banners as $banner)
     <div class="col-md-2 bg-light m-3 border rounded" >
-        <img src="../storage/{{$banner->arquivo}}" alt="" class="mt-1 img-fluid" height="152px" >
+        <img src="https://kitcell-bucket.s3-sa-east-1.amazonaws.com{{$banner->url}}" alt="" class="mt-1 img-fluid" height="152px" >
         <hr>
         <div class="row justify-content-center py-3">
             <form action="{{route('delete', ['banner'=> $banner->id])}}" method="post">

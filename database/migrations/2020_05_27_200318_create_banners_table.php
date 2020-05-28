@@ -15,7 +15,8 @@ class CreateBannersTable extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
-            $table->string('arquivo');
+            $table->string('filename');
+            $table->string('url');
             $table->timestamps();
         });
     }

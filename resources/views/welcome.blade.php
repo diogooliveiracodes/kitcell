@@ -13,7 +13,7 @@
             </div>
         @foreach($banners as $banner)
             <div class="carousel-item">
-                <img src="../storage/{{$banner->arquivo}}" class="d-block w-100" alt="...">
+                <img src="https://kitcell-bucket.s3-sa-east-1.amazonaws.com{{$banner->url}}" class="d-block w-100" alt="...">
             </div>
         @endforeach
             </div>

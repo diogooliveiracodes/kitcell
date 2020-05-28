@@ -44,12 +44,14 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('arquivo')->store('imagens', 'public');
+        $path = $request->file('arquivo')->store('imagens', 's3');
+        Storage::disk('s3')->setVisibility($path, 'public');
         
         $banner = new Banner();
-        $banner->arquivo = $path;
+        $banner->filename = $path;
+        $banner->url = Storage::disk('s3')->url($path);
         $banner->save();
-        return redirect('/home');
+        return redirect('home');
     }
 
     /**
@@ -94,7 +96,7 @@ class BannerController extends Controller
      */
     public function destroy(Banner $banner)
     {
-        Storage::disk('public')->delete($banner->arquivo);
+        Storage::disk('s3')->delete($banner->filename);
         $banner->delete();
 
         return redirect('/home');

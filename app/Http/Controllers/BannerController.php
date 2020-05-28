@@ -45,7 +45,11 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $path = $request->file('arquivo')->store('imagens', 's3');
-        Storage::disk('s3')->setVisibility($path, 'public');
+        try{
+            Storage::disk('s3')->setVisibility($path, 'public');
+        } catch(Exception $e ){
+            echo $e->getMessage();
+        }
         
         $banner = new Banner();
         $banner->filename = $path;

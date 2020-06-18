@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.homenavbar')
 
 @section('content')
 
@@ -16,7 +16,7 @@
                 @method('put')
                 <div class="form-group">
                 <label for="arquivo">Selecione a imagem:</label>
-                <input type="file" class="form-control-file" id="arquivo" name="arquivo">
+                <input type="file" class="form-control-file" id="arquivo" name="arquivo" required>
                 <small>É importante o arquivo estar na proporção 1200x400</small>
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg">Confirmar</button>
@@ -36,7 +36,7 @@
 <div class="row m-0 p-0" >
     @foreach($banners as $banner)
     <div class="col-md-2 bg-light m-3 border rounded" >
-        <img src="{{$banner->url}}" alt="" class="mt-1 img-fluid" height="152px" >
+        <img src="https://kitcell-bucket.s3.sa-east-1.amazonaws.com{{$banner->url}}" alt="" class="mt-1 img-fluid" height="152px" >
         <hr>
         <div class="row justify-content-center py-3">
             <form action="{{route('delete', ['banner'=> $banner->id])}}" method="post">

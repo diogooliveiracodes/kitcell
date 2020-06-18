@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Banner;
+use App\Celular;
+use App\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,9 +17,13 @@ class BannerController extends Controller
      */
     public function index()
     {
+        $celulares = Celular::orderBy('created_at', 'desc')->take(5)->get();;
         $banners = Banner::all();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(2)->get();
         return view('welcome', [
-            'banners' => $banners
+            'banners' => $banners,
+            'celulares' => $celulares,
+            'blogs' => $blogs,
         ]);
     }
 

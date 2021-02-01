@@ -1,13 +1,24 @@
-<h1> Site/blog para uma loja de manutenção de celulares </h1>
+# Webpage empresarial
+Este é o portal institucional da empresa PotencialCred. <br>
+O site conte com um painel administrativo totalmente responsivo e perfeitamente funcional em smartphones. <br> 
 
-<h4>Recursos do site:</h4>
+## Funcionalidades
+1. Conexão com whatsapp business.
+2. Conexão com API de contato por e-mail.
+3. Portal para publicação de Banners na página inicial.
+4. Redirecionamento para ligações em smarthphones.
+5. Redirecionamento para redes sociais.
+6. Portal para publicações em um blog local.
+7. Portal para publicações de produtos.
+
+## Recursos do site:
 <ul>
     <li>Painel administrativo</li>
     <li>Opção de publicar serviços</li>
     <li>Opção de fazer postagens no blog</li>
 </ul>
 
-<h4>Tecnologias adotadas:</h4>
+## Tecnologias:
 
 <ul>
     <li>PHP 7.2.5</li>
@@ -18,5 +29,5 @@
     <li>AWS</li>
 </ul>
 
-<h4>Site publicado em:</h4>
+## Site publicado em:
 <a href="www.kitcell7.com.br"> https://www.kitcell7.com.br </a>

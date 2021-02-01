@@ -1,6 +1,6 @@
 # Webpage empresarial
 Este é o portal institucional da empresa Kitcell. <br>
-O site conte com um painel administrativo totalmente responsivo e perfeitamente funcional em smartphones. <br> 
+O site possui um painel administrativo totalmente responsivo e perfeitamente funcional em smartphones. <br> 
 
 ## Funcionalidades
 1. Conexão com whatsapp business.

@@ -1,5 +1,5 @@
 # Webpage empresarial
-Este é o portal institucional da empresa PotencialCred. <br>
+Este é o portal institucional da empresa Kitcell. <br>
 O site conte com um painel administrativo totalmente responsivo e perfeitamente funcional em smartphones. <br> 
 
 ## Funcionalidades

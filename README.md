@@ -11,15 +11,7 @@ O site possui um painel administrativo totalmente responsivo e perfeitamente fun
 6. Portal para publicações em um blog local.
 7. Portal para publicações de produtos.
 
-## Recursos do site:
-<ul>
-    <li>Painel administrativo</li>
-    <li>Opção de publicar serviços</li>
-    <li>Opção de fazer postagens no blog</li>
-</ul>
-
 ## Tecnologias:
-
 <ul>
     <li>PHP 7.2.5</li>
     <li>Laravel 7.0</li>
